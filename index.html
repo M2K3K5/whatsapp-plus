@@ -1,0 +1,228 @@
+<html>
+  <head>  
+    <title id="title">Whatsapp Plus</title>   
+    <meta charset="utf8">    
+    <meta name="author" content="Seb">      
+    <meta name="description" content="Whatsapp Plus by Seb"> 
+    <meta name="keywords" content="Whatsapp, Whatsapp Plus, Extension, Website, Seb">
+    <meta name="website-header" content="https://seb.12hp.de/web_icon.png">
+    <meta property="og:image" content="https://seb.12hp.de/web_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://seb.12hp.de/whatsapp-plus/icon.png">  
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+    
+    <script>       
+         
+        var switchImageInterval = setInterval(imgSwitch, 3000);
+       
+       
+       function imgSwitch() {
+           var lastChat = document.getElementById("lastChat");
+           var openedChat = document.getElementById("openedChat");
+       
+           if(lastChat.children[0].outerHTML.includes("shown")) {
+               lastChat.children[0].outerHTML = lastChat.children[0].outerHTML.replace("shown", "hidden");
+               lastChat.children[1].className = "hidden";
+               lastChat.children[2].className = "";
+           }
+           else {
+               lastChat.children[0].outerHTML = lastChat.children[0].outerHTML.replace("hidden", "shown");
+               lastChat.children[1].className = "";
+               lastChat.children[2].className = "hidden";
+           }
+           
+           
+           if(openedChat.children[0].outerHTML.includes("shown")) {
+               openedChat.children[0].outerHTML = openedChat.children[0].outerHTML.replace("shown", "hidden");
+               openedChat.children[1].className = "hidden";
+               openedChat.children[2].className = "";
+           }
+           else {
+               openedChat.children[0].outerHTML = openedChat.children[0].outerHTML.replace("hidden", "shown");
+               openedChat.children[1].className = "";
+               openedChat.children[2].className = "hidden";
+           }
+       }
+
+       if(location.href != "https://seb.12hp.de/whatsapp-plus/") {location.href = "https://seb.12hp.de/whatsapp-plus";}
+   </script>
+
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        nav {
+            background-color: #1ebea5;
+            height: 90px;
+            width: 100%;
+            color: white;
+            overflow-x: auto;
+            overflow-y:hidden;
+        }
+        nav img {height: 30px; margin-left: 40px; margin-top: 25px;float: left;}
+        nav h1 {float: left; margin-left: 5px; margin-top: 25px; font-size: 25px; font-family: 'Roboto'; color: white;}
+        .nav-item {
+            font-size: large; 
+            font-weight: bold; 
+            margin-top: 30px;
+            float: right;
+            margin-right: 7%;
+            text-decoration: none;
+            color: white; 
+            }
+        main {
+            padding: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            width: 50%;
+            color: #1ebea5;
+        }
+        
+        footer {
+            padding-top: 5px; 
+            margin-top: 20px;  
+            bottom: 0px;   
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background-color: #1ebea5;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        aside {
+            width: 400px;
+            position: relative;
+            top: 100px
+        }
+        aside img {width: 100%; height: 240px;}
+        aside h2 {margin-top: 0px; margin-bottom: 5px;}
+        aside div {background-color: lightcyan; padding: 10px;}
+        ul {list-style-type: circle;}
+        .hidden {display:none;}
+    
+        .leftAside {float:left;}
+        .leftAside div {margin-left:5px;}
+        
+        .rightAside {float:right}
+        .rightAside div {margin-right:5px;}
+
+        @media only screen and (max-width: 1500px) {
+            aside {position: relative; width: auto; top: unset; }
+            main {width:80%; margin-bottom: 60px; }
+            .leftAside {float:unset; margin: auto; margin-top: -50px;}
+            .rightAside {float:unset; margin: auto;}
+        }
+
+        @media only screen and (max-width: 900px) {
+            .nav-item {float:unset; padding-top: 15px; display: inline; margin-left: 10px; }
+            nav {height: auto; width: 100%;}
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <nav>
+        <img src="https://seb.12hp.de/whatsapp-plus/icon.png" alt="Icon">
+        <a href=""><h1>Whatsapp Plus</h1></a>
+        <a href="https://github.com/M2K3K5/whatsapp-plus/raw/main/Whatsapp%20Plus%201.1.rar" class="nav-item">Download</a>
+        <a href="https://discord.gg/9T58MNHdEA" class="nav-item">Support Server</a>
+        <a href="#installation" class="nav-item">Installation</a>
+        <a href="#features" class="nav-item">Features</a>
+    </nav>
+
+
+    <aside class="leftAside">
+        <div id="lastChat">
+            <h2>Last chats (shown)</h2>
+            <a href="https://seb.12hp.de/whatsapp-plus/last-chat-shown.png" target="_blank">
+                <img src="https://seb.12hp.de/whatsapp-plus/last-chat-shown.png" alt="">
+            </a>
+            <a class="hidden" href="https://seb.12hp.de/whatsapp-plus/last-chat-hidden.png" target="_blank">
+                <img src="https://seb.12hp.de/whatsapp-plus/last-chat-hidden.png" alt="">
+            </a>
+        </div>
+        <div style="margin-top: 5px; margin-left: 5px;" id="openedChat">
+            <h2>Opened chat (shown)</h2>
+            <a href="https://seb.12hp.de/whatsapp-plus/chat-shown.png" target="_blank">
+                <img src="https://seb.12hp.de/whatsapp-plus/chat-shown.png" alt="">
+            </a>
+            <a class="hidden" href="https://seb.12hp.de/whatsapp-plus/chat-hidden.png" target="_blank">
+                <img src="https://seb.12hp.de/whatsapp-plus/chat-hidden.png" alt="">
+            </a>
+        </div>
+    </aside>
+    
+    <aside class="rightAside">
+        <div>
+            <h2>Emoji Spammer</h2>
+            <a href="https://seb.12hp.de/whatsapp-plus/emoji-spam.png" target="_blank">
+                <img src="https://seb.12hp.de/whatsapp-plus/emoji-spam.png" alt="" style="height: 350px;">
+            </a>
+        </div>
+        <div style="margin-top: 5px;">
+            <h2>Disconnection notification</h2>
+            <a href="https://seb.12hp.de/whatsapp-plus/disconnected.png" target="_blank">
+                <img src="https://seb.12hp.de/whatsapp-plus/disconnected.png" alt="" style="height: 170px;">
+            </a>
+        </div>
+    </aside>
+
+    <main>
+        <h2 style="text-align: center; text-decoration: underline; background-color: antiquewhite; margin-bottom: 2px; padding: 10px; padding-bottom: 15px; border-radius: 30px 30px 10px 10px;">Whatsapp Plus - A simple Extension<br>It will let Whatsapp Web come with brand new features</h2>
+        <div style="background-color: #D8E8EA; padding: 5px; padding-left: 10px; width: auto; border-radius: 10px;">
+            <h2 id="features">Features:</h2>
+            <ul>
+                <li><h3>Hide last messages in chat list</h3></li>
+                <li><h3>Hide messages in open chat, hover shows message content</h3></li>
+                <li><h3>Windows notification when disconnected from mobile device</h3></li>
+                <li><h3>Effective emoji spammer</h3></li>
+            </ul>
+        </div>    
+        <div style="padding: 5px; padding-left: 10px; margin-top: 2px; background-color:lightblue; border-radius: 10px 10px 20px 20px;">
+            <h2 id="installation">Installation:</h2>
+            <ol>
+                <li>Hit the download button and save the .rar in your documents</li>
+                <li>Unpack the rar. </li>
+                <li>Enter in your browser <u>chrome://extensions</u> </li>
+                <li>Turn "Developer Mode" on (at the top right)</li>
+                <li>Click "load unpacked" and navigate to the folder where you unpacked the rar in your documents</li>
+                <li>Choose the folder "Whatsapp Plus" and click "select folder"</li>
+                <li>The extension should be added to your extensions and normally it will be turned on automatically (if not, turn it on)</li>
+                <li>Enjoy :) </li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright <span id="year">2021</span> © Seb</p>
+        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    </footer>
+
+    <div style="display: none;">
+        <?php 
+        $fileName = "./logs/logs.txt";
+    
+        $file = json_decode(file_get_contents($fileName) );
+        class Datas { public $time; public $ref; public $path;}
+        $obj = new Datas();
+        $ref = "undefined";
+        if (isset($_SERVER['HTTP_REFERER'])) {$ref = $_SERVER['HTTP_REFERER'];} 
+        $obj->ref = $ref;
+        $obj->time = time() ."000";
+        $obj->path = $_SERVER['REQUEST_URI'];
+        array_push($file, $obj);
+        
+        $myfile = fopen($fileName,'w');
+        fwrite($myfile, json_encode($file));
+        fclose($myfile);
+        ?>
+        </div>
+  </body>
+</html>
